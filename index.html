@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SUNTEJAO - Discover Your Beat</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #121212;
+      --card: #1e1e1e;
+      --highlight: #1db954;
+      --text: #ffffff;
+      --subtext: #b3b3b3;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+    }
+
+    header.main-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1rem 2rem;
+      background-color: var(--card);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+    }
+
+    .logo img {
+      width: 40px;
+      margin-right: 10px;
+    }
+
+    .logo span {
+      font-weight: bold;
+      font-size: 1.4rem;
+      color: var(--highlight);
+    }
+
+    .nav-links a {
+      margin: 0 1rem;
+      color: var(--text);
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+
+    .nav-links a:hover {
+      color: var(--highlight);
+    }
+
+    .search-container {
+      display: flex;
+      align-items: center;
+      background-color: #2a2a2a;
+      padding: 0.4rem 0.6rem;
+      border-radius: 5px;
+    }
+
+    .search-container input {
+      background: transparent;
+      border: none;
+      color: var(--text);
+      outline: none;
+      padding: 0.3rem;
+    }
+
+    .search-container i {
+      color: var(--highlight);
+    }
+
+    .hero {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 4rem 2rem;
+      text-align: center;
+      background-color: var(--bg);
+    }
+
+    .hero-text h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+
+    .hero-text p {
+      color: var(--subtext);
+    }
+
+    .section-title {
+      font-size: 2rem;
+      margin: 2rem 1.5rem 1rem;
+      color: var(--highlight);
+    }
+
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+      gap: 1.5rem;
+      padding: 1rem 2rem;
+    }
+
+    .card, .artist-card {
+      background-color: var(--card);
+      border-radius: 12px;
+      overflow: hidden;
+      transition: transform 0.3s ease;
+      opacity: 0;
+      transform: translateY(20px);
+      cursor: pointer;
+    }
+
+    .card.show, .artist-card.show {
+      opacity: 1;
+      transform: translateY(0);
+      transition: all 0.6s ease-out;
+    }
+
+    .card:hover, .artist-card:hover {
+      transform: scale(1.05);
+    }
+
+    .card img, .artist-card img {
+      width: 100%;
+      display: block;
+    }
+
+    .card .info, .artist-card .info {
+      padding: 0.8rem;
+    }
+
+    .card h3, .artist-card h3 {
+      margin: 0.3rem 0;
+      font-size: 1rem;
+      color: var(--text);
+    }
+
+    .card p {
+      color: var(--subtext);
+      font-size: 0.9rem;
+      margin: 0;
+    }
+
+    .artist-card img {
+      border-radius: 50%;
+      width: 120px;
+      height: 120px;
+      margin: auto;
+      display: block;
+      object-fit: cover;
+    }
+
+    .artist-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+      gap: 2rem;
+      padding: 2rem;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+  <header class="main-header">
+    <div class="logo">
+      <img src="https://i.ibb.co/KptxkfY5/suntejao-logo.png" alt="SUNTEJAO Logo">
+      <span>SUNTEJAO</span>
+    </div>
+    <nav class="nav-links">
+      <a href="#">Home</a>
+      <a href="#">Explore</a>
+      <a href="#">Playlists</a>
+      <a href="#">Genres</a>
+    </nav>
+    <div class="search-container">
+      <input type="text" placeholder="Search tracks, artists...">
+      <i class="fas fa-search"></i>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="hero-text">
+      <h1>Feel the Beat with SUNTEJAO</h1>
+      <p>Your personalized music hub to vibe, discover, and groove.</p>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="section-title">🔥 Trending Global Songs</h2>
+    <div class="card-grid">
+      <div class="card">
+        <img src="https://i.ytimg.com/vi/gGdGFtwCNBE/hqdefault.jpg" alt="Heat Waves" />
+        <div class="info">
+          <h3>Heat Waves</h3>
+          <p>Glass Animals</p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="https://i.ytimg.com/vi/E07s5ZYygMg/hqdefault.jpg" alt="Levitating" />
+        <div class="info">
+          <h3>Levitating</h3>
+          <p>Dua Lipa</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="section-title">🇮🇳 Trending Indian Songs</h2>
+    <div class="card-grid">
+      <div class="card">
+        <img src="https://i.ytimg.com/vi/Z5xT3Aqb8xI/hqdefault.jpg" alt="Kesariya" />
+        <div class="info">
+          <h3>Kesariya</h3>
+          <p>Arijit Singh</p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="https://i.ytimg.com/vi/BEvF6ZC1Fh8/hqdefault.jpg" alt="Tum Hi Ho" />
+        <div class="info">
+          <h3>Tum Hi Ho</h3>
+          <p>Arijit Singh</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="section-title">🎤 Popular Indian Artists</h2>
+    <div class="artist-grid">
+      <div class="artist-card">
+        <img src="https://i1.sndcdn.com/avatars-000352135482-30cdo2-t500x500.jpg" alt="Arijit Singh" />
+        <div class="info">
+          <h3>Arijit Singh</h3>
+        </div>
+      </div>
+      <div class="artist-card">
+        <img src="https://static.toiimg.com/photo/msid-88248486/88248486.jpg" alt="Neha Kakkar" />
+        <div class="info">
+          <h3>Neha Kakkar</h3>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    const cards = document.querySelectorAll('.card, .artist-card');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('show');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1 });
+
+    cards.forEach(card => observer.observe(card));
+  </script>
+
+</body>
+</html>
+
